@@ -26,8 +26,7 @@ Then you need to enable Apache modules,
 ## Finally re-start apache2, use 
 	sudo /etc/init.d/apache2 restart command.
 ### NOTE	
-All the archive have to be copy in this path: /var/www/html
-And then you can introduce the raspberry ip in your favorite browser and give the necessary permission.
-
-NOTE: you can control your raspberry with differents programs like putty or MobaXterm.
-      Open the php code, to see the voice commands you can use, to enable differents GPIO pins of the raspberry
+	All the archive have to be copy in this path: /var/www/html
+	And then you can introduce the raspberry ip in your favorite browser and give the necessary permission.
+	You can control your raspberry with differents programs like putty or MobaXterm.
+	Open the php code, to see the voice commands you can use, to enable differents GPIO pins of the raspberry
