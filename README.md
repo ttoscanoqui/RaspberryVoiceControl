@@ -8,12 +8,16 @@ Then its important to change the user that will execute apache2 in raspberry.
         export APACHE_RUN_USER=pi
 	      export APACHE_RUN_GROUP=pi
 
-Save and exit, the its necessary to create a directory to save the certifications, use sudo mkdir /etc/apache2/ssl command and then sudo openssl req -x509 -nodes -days 1095 -newkey rsa:2048 -out /etc/apache2/ssl/server.crt -keyout /etc/apache2/ssl/server.key
+Save and exit, the its necessary to create a directory to save the certifications
+### use 
+sudo mkdir /etc/apache2/ssl
+#### and then 
+sudo openssl req -x509 -nodes -days 1095 -newkey rsa:2048 -out /etc/apache2/ssl/server.crt -keyout /etc/apache2/ssl/server.key
 #
 Something like certificate image you maybe see, and you can complete with your personal information.
 Then you need to enable Apache modules, use sudo a2enmod ssl command.
-Then create connection with the apache2 configuration, use 
-# sudo ln -s /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/000-default-ssl.conf      command
+## Then create connection with the apache2 configuration, use 
+sudo ln -s /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/000-default-ssl.conf      command
 Then we have to edit the certificate path, use sudo nano /etc/apache2/sites-enabled/000-default-ssl.conf command, then find and change as this:
                    SSLCertificateFile     /etc/apache2/ssl/server.crt
                    SSLCertificateKeyFile    /etc/apache2/ssl/server.key
