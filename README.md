@@ -9,9 +9,9 @@ Then its important to change the user that will execute apache2 in raspberry.
 	      export APACHE_RUN_GROUP=pi
 
 Save and exit, the its necessary to create a directory to save the certifications
-### use 
+##use 
 sudo mkdir /etc/apache2/ssl
-#### and then 
+## and then 
 sudo openssl req -x509 -nodes -days 1095 -newkey rsa:2048 -out /etc/apache2/ssl/server.crt -keyout /etc/apache2/ssl/server.key
 #
 Something like certificate image you maybe see, and you can complete with your personal information.
