@@ -1,0 +1,26 @@
+<html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
+</head>
+<body>
+<script>
+function openPage(voz){
+window.open('domotic.php?voz='+voz);}
+
+if (annyang) {
+annyang.setLanguage('es-ES');
+var commands = {
+ 'chino *voz' : openPage,
+ 'jarvis *voz' : openPage,
+ 'mariuxi *voz' : openPage,
+ 'maria *voz' : openPage,
+ 'inge *voz' : openPage
+ };
+annyang.addCommands(commands);
+annyang.start();
+}
+</script>
+</body>
+</html>
