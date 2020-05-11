@@ -25,7 +25,7 @@ Then you need to enable Apache modules,
 	SSLCertificateKeyFile    /etc/apache2/ssl/server.key
 ## Finally re-start apache2, use 
 	sudo /etc/init.d/apache2 restart command.
-# NOTE	
+### NOTE	
 All the archive have to be copy in this path: /var/www/html
 And then you can introduce the raspberry ip in your favorite browser and give the necessary permission.
 
